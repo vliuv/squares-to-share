@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <%- include("head.ejs", {}) %>
+        <title>share</title>
+    </head>
+    <body>
+        <header>
+            <%- include("nav.ejs", {}) %>
+        </header>
+        <main>
+
+            <script src="background.js"></script>
+
+            <div class="shareContent">
+                <h2>Share Your Own Square</h2>
+                <p class="stitches">xxxxxxxxxxxxxxxxxxxxxxx</p>
+
+                <p></p>
+                <p>here you can share an image of your artwork to be featured on a square of the virtual blanket!</p>
+                <p>not feeling creative? visit the <a href="/create" class="inlineLink">create</a> page for easy square creation:</p>
+
+                <form method="POST" action="/upload" enctype="multipart/form-data">
+                    
+                    <p class="formTitles">image upload:</p>
+                    <p class="formSubtitles">please upload an image with a 1:1 aspect ratio</p>
+                    <label for="file" class="fileButton"><i class="fa-solid fa-image"></i> upload</label>
+                    <p></p>
+                    <input type="file" id="file" name="image">
+
+                    <p class="formTitles">name:</p>
+                    <input type="text" name="name" placeholder="">
+                    <p></p>
+
+                    <p class="formTitles">description:</p>
+                    <input type="text" name="description" placeholder="">
+                    
+                    <input type="submit" name="submitButton" value="submit!">
+
+                </form>
+
+            </div>
+        </main>
+        <%- include("footer.ejs", {}) %>
+    </body>
+</html>

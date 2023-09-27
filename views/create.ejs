@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <%- include("head.ejs", {}) %>
+        <title>create</title>
+    </head>
+    <body>
+        <header>
+            <%- include("nav.ejs", {}) %>
+        </header>
+        <main>
+            <div class="createContent">
+                <h2>Create</h2>
+                <p class="stitches">xxxxxxxxxxxxxxxxxxxxxxx</p>
+
+                <p></p>
+                <p>this generator makes it easy for anyone to make a square and share it to our digital blanket!</p>
+                <p>create a square in just 3 easy steps!</p>
+                <ol>
+                    <li>click a color to change it using a color picker</li>
+                    <li>click "pattern" to generate a new pattern for your colors if you’d like</li>
+                    <li>click "save" to download your finished square!</li>
+                </ol>
+
+                <div id="createDiv">
+                    <script id="create" src="create.js"></script>
+                </div>
+                
+                <div id="createButtons"></div>
+
+                <div id="colorButtons"></div>
+
+                <p>once you’ve saved your square, go to the <a href="/share" class="inlineLink">share</a> page and upload it!</p>
+            </div>
+        </main>
+        <%- include("footer.ejs", {}) %>
+    </body>
+</html>

@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <%- include("head.ejs", {}) %>
+        <title>square by <%= square.name %></title>
+    </head>
+    <body>
+        <header>
+            <div class="title" >
+                <p class="stitches">xxxxxxxxxxxxxxxx</p>
+                <h1><a href="/adminhome">Squares to Share</a></h1>
+                <p class="stitches">xxxxxxxxxxxxxxxx</p>
+            </div>
+            <nav>
+                <h3><a href="/adminhome">admin</a></h3>
+                <h3><a href="/">public</a></h3>
+            </nav>
+        </header>
+        <main>
+            <div class="squarePageContent">
+                <img src="/<%= square.image %>">
+
+                <div class="likeId likeLabel" id="like-<%= square._id %>" style="margin-top: 20px;">
+                    <i class="fa-solid fa-heart"></i>
+                    <div id="like-<%= square._id %>-text" style="display: inline;">
+                        <%=square.likes%>
+                    </div>
+                </div>
+
+                <h4><%= square.name %></h4>
+                <p><%= square.description %></p>
+                <div class="date"><p><%= square.date %></p></div>
+                <p><a href="/adminhome" class="inlineLink">< Back</a></p>
+            </div>
+        </main>
+    </body>
+    <footer>
+        <p class="stitches">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+        <a href="/logout">logout</a>
+    </footer>
+</html>

@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <%- include("head.ejs", {}) %>
+        <script src="/script.js"></script>
+        <title>square by <%= square.name %></title>
+    </head>
+    <body>
+        <header>
+            <%- include("nav.ejs", {}) %>
+        </header>
+        <main>
+            <div class="squarePageContent">
+                <img src="/<%= square.image %>">
+
+                <div class="likeId likeLabel" id="like-<%= square._id %>" style="margin-top: 20px;">
+                    <i class="fa-solid fa-heart"></i>
+                    <div id="like-<%= square._id %>-text" style="display: inline">
+                        <%=square.likes%>
+                    </div>
+                </div>
+
+                <h4><%= square.name %></h4>
+                <p><%= square.description %></p>
+                <div class="date"><p><%= square.date %></p></div>
+                <p><a href="/" class="inlineLink">< Back</a></p>
+            </div>
+        </main>
+        <%- include("footer.ejs", {}) %>
+    </body>
+</html>

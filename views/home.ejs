@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <%- include("head.ejs", {}) %>
+        <script src="script.js"></script>
+        <title>home</title>
+    </head>
+    <body>
+        <header>
+            <%- include("nav.ejs", {}) %>
+        </header>
+        <div class="sort">
+            <div class="sortLinks">
+                <p>sort by:</p>
+                <div class="links">
+                    <a href="/">most recent</a>
+                    <a href="/popular">most popular</a>
+                </div>
+            </div>
+        </div>
+        <main>
+            <div class="homeContent">
+                <div class="blanket">
+                    <% squares.forEach( (square) => { %>
+                        <div class="square">
+                            <div class="squareContents">
+                                <img src="<%= square.image %>">
+                            </div>
+                            <div class="hoverLabel">
+                                <form method="POST" action="/delete">
+                                    <label for="square-<%=square._id%>" class="deleteLabel" style="display: none;">+</label>
+                                    <input id="square-<%=square._id%>" type="submit" name="deletebutton" value="" class="deleteButton">
+                                    <input type="hidden" name="squareId" value="<%=square._id%>">
+                                </form>
+                                <a href="/square/<%= square._id %>" class="squareLink">
+                                    <h4><%= square.name %></h4>
+                                </a>
+                                <div class="likeId likeLabel" id="like-<%= square._id %>">
+                                    <i class="fa-solid fa-heart"></i>
+                                    <div id="like-<%= square._id %>-text" style="display: inline;">
+                                        <%=square.likes%>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <% }) %>
+                </div>
+            </div>
+        </main>
+        <a href="/" class="backToTop"><i class="fa-solid fa-arrow-up"></i></a>
+        <%- include("footer.ejs", {}) %>
+    </body>
+</html>
