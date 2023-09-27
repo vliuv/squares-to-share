@@ -1,0 +1,111 @@
+@import "large.css";
+
+h1 {
+    font-size: 35px;
+}
+
+.stitches {
+    font-size: 16px;
+    letter-spacing: 4px;
+}
+
+h3 {
+    font-size: 14px;
+}
+
+.sort {
+    margin-left: 28px;
+}
+
+.sortLinks p {
+    font-size: 14px;
+}
+
+.sortLinks a {
+    font-size: 14px;
+}
+
+.homeContent {
+    margin: 10px 30px 40px 30px;
+}
+
+.square {
+    width: calc((100 / 4) * 1%);
+}
+
+.squareContents {
+    width: calc(100% - 6px);
+    height: calc(100% - 6px);
+    margin: 3px;
+}
+
+.hoverLabel {
+    top: 3px;
+    left: 3px;
+    width: calc(100% - 6px);
+    height: calc(100% - 6px);
+}
+
+.hoverLabel h4 {
+    font-size: 18px;
+}
+
+.hoverLabel .likeLabel {
+    font-size: 14px;
+}
+
+.squarePageContent {
+    width: 80%;
+}
+
+.squarePageContent .likeLabel {
+    font-size: 18px;
+}
+
+.shareContent, .aboutContent, .createContent, .adminLoginContent, .adminSetupContent {
+    width: 80%;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+h2 {
+    font-size: 26px;
+}
+
+.shareContent .stitches, .aboutContent .stitches, .createContent .stitches, .adminLoginContent .stitches, .adminSetupContent .stitches {
+    font-size: 26px;
+}
+
+.shareContent p, .aboutContent p, .createContent p, .adminLoginContent p, .adminSetupContent p {
+    width: 80%;
+    font-size: 14px;
+}
+
+input[type=text], input[type=password] {
+    font-size: 14px;
+}
+
+.fileButton {
+    font-size: 14px;
+}
+
+input[type=submit] {
+    font-size: 14px;
+}
+
+.deleteLabel {
+    color: #F3EBE6;
+    font-size: 30px;
+}
+
+.createContent ol li {
+    font-size: 14px;
+}
+
+footer {
+    font-size: 14px;
+}
+
+.backToTop {
+    font-size: 24px;
+}
